@@ -5,12 +5,14 @@ import { LivroService } from 'src/app/service/livro.service';
 
 import { Component, OnDestroy } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { listAnimationTrigger } from 'src/app/aninmations';
 
 const PAUSA = 300;
 @Component({
   selector: 'app-lista-livros',
   templateUrl: './lista-livros.component.html',
   styleUrls: ['./lista-livros.component.css'],
+  animations: [listAnimationTrigger]
 })
 export class ListaLivrosComponent{
   campoBusca = new FormControl();
